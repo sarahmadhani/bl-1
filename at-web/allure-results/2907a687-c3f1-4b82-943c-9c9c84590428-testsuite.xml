@@ -1,0 +1,112 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1631632621677' stop='1631632622897'>
+    <name>The Internet Guinea Pig Website: As a user, I can log into the secure area</name>
+    <title>The Internet Guinea Pig Website: As a user, I can log into the secure area</title>
+    <test-cases>
+        <test-case start='1631632621678' status='passed' stop='1631632621680'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1631632621681' status='broken' stop='1631632622887'>
+            <name>Given I am on the homepage page</name>
+            <title>Given I am on the homepage page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps>
+                <step start='1631632621684' status='broken' stop='1631632622887'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='674789ec-b1c8-408c-88fa-56026356d049-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps>
+                        <step start='1631632622866' status='broken' stop='1631632622887'>
+                            <name>DELETE /session/:sessionId</name>
+                            <title>DELETE /session/:sessionId</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>RequestError: socket hang up</message>
+                <stack-trace>RequestError: socket hang up
+                    at ClientRequest.&lt;anonymous> (/home/sarah/Documents/bl-1/at-web/node_modules/got/dist/source/core/index.js:956:111)
+                    at Object.onceWrapper (events.js:422:26)
+                    at ClientRequest.emit (events.js:327:22)
+                    at ClientRequest.EventEmitter.emit (domain.js:467:12)
+                    at ClientRequest.origin.emit (/home/sarah/Documents/bl-1/at-web/node_modules/@szmarczak/http-timer/dist/source/index.js:43:20)
+                    at Socket.socketOnEnd (_http_client.js:493:9)
+                    at Socket.emit (events.js:327:22)
+                    at Socket.EventEmitter.emit (domain.js:467:12)
+                    at endReadableNT (internal/streams/readable.js:1327:12)
+                    at connResetException (internal/errors.js:607:14)
+                    at Socket.socketOnEnd (_http_client.js:493:23)
+                    at Socket.emit (events.js:327:22)
+                    at Socket.EventEmitter.emit (domain.js:467:12)
+                    at endReadableNT (internal/streams/readable.js:1327:12)
+                    at processTicksAndRejections (internal/process/task_queues.js:80:21)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1631632622888' status='pending' stop='1631632622888'>
+            <name>When I search mobil products</name>
+            <title>When I search mobil products</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1631632622889' status='pending' stop='1631632622889'>
+            <name>Then I see list of product is containing of mobil</name>
+            <title>Then I see list of product is containing of mobil</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1631632622889' status='passed' stop='1631632622896'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

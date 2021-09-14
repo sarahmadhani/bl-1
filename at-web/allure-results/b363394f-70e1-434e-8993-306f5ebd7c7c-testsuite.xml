@@ -1,0 +1,133 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1631631933323' stop='1631631944190'>
+    <name>The Internet Guinea Pig Website: As a user, I can log into the secure area</name>
+    <title>The Internet Guinea Pig Website: As a user, I can log into the secure area</title>
+    <test-cases>
+        <test-case start='1631631933324' status='passed' stop='1631631933326'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1631631933327' status='passed' stop='1631631940630'>
+            <name>Given I am on the homepage page</name>
+            <title>Given I am on the homepage page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps>
+                <step start='1631631933329' status='passed' stop='1631631940625'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='dd714827-0402-483b-a6d1-7bb78e6849af-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1631631940630' status='passed' stop='1631631944183'>
+            <name>When I search mobil products</name>
+            <title>When I search mobil products</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps>
+                <step start='1631631940636' status='passed' stop='1631631940685'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='c5282abe-eb42-41c0-8d11-263e389b7df2-attachment.json' type='application/json' size='71'/>
+                        <attachment title='Response' source='3162829e-825c-4f8f-84ab-f785eeb525a8-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1631631940706' status='passed' stop='1631631940798'>
+                    <name>POST /session/:sessionId/element/30cc8b2a-b931-4eb7-a1f4-ec66d9384aaf/clear</name>
+                    <title>POST /session/:sessionId/element/30cc8b2a-b931-4eb7-a1f4-ec66d9384aaf/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1631631940801' status='passed' stop='1631631941022'>
+                    <name>POST /session/:sessionId/element/30cc8b2a-b931-4eb7-a1f4-ec66d9384aaf/value</name>
+                    <title>POST /session/:sessionId/element/30cc8b2a-b931-4eb7-a1f4-ec66d9384aaf/value</title>
+                    <attachments>
+                        <attachment title='Request' source='4d731285-30d6-4b86-8c8b-56cd2396ef49-attachment.json' type='application/json' size='21'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1631631941023' status='passed' stop='1631631941209'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='c06832fe-52e0-4e6e-8b9e-d10f5cf8adfd-attachment.json' type='application/json' size='61'/>
+                        <attachment title='Response' source='e09ae293-5f14-4ee9-ac22-77876b00d0ae-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1631631941213' status='passed' stop='1631631944182'>
+                    <name>POST /session/:sessionId/element/8f91466d-9db3-4089-b837-5e5653d3a83a/click</name>
+                    <title>POST /session/:sessionId/element/8f91466d-9db3-4089-b837-5e5653d3a83a/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1631631944183' status='broken' stop='1631631944189'>
+            <name>Then I see list of product is containing of mobil</name>
+            <title>Then I see list of product is containing of mobil</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: isDisplayed is not defined</message>
+                <stack-trace>ReferenceError: isDisplayed is not defined
+                    at PLPage.productListIsContain (/home/sarah/Documents/bl-1/at-web/features/pageobjects/pdp.page.js:19:11)
+                    at World.&lt;anonymous> (/home/sarah/Documents/bl-1/at-web/features/step-definitions/plp.step.js:6:13)
+                    at World.executeAsync (/home/sarah/Documents/bl-1/at-web/node_modules/@wdio/utils/build/shim.js:293:27)
+                    at World.testFrameworkFnWrapper (/home/sarah/Documents/bl-1/at-web/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:45:32)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1631631944189' status='passed' stop='1631631944190'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.159'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
