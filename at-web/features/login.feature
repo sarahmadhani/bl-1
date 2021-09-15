@@ -12,5 +12,8 @@ Feature: Login
         When I login by phonenumber <phonenumber1>
         Then error message <errorMessage> is appear
         Examples:
-            | title 1           | phonenumber1 | errorMessage          |
-            | Unregister accout | 08585274274  | Nomor belum terdaftar |
+            | title 1            | phonenumber1 | errorMessage                                   |
+            | Unregister accout  | 08585274274  | Akun tidak ditemukan. Periksa dan coba lagi ya |
+            | Empty field        |              | Form harus diisi dulu ya                       |
+            | email invalid      | sarah.com    | Akun tidak ditemukan. Periksa dan coba lagi ya |
+            | unregister invalid | sarah1@1.com | Akun tidak ditemukan. Periksa dan coba lagi ya |
