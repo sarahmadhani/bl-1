@@ -1,7 +1,16 @@
-Feature: The Internet Guinea Pig Website
+Feature: Login
 
-  Scenario Outline: As a user, I can log into the secure area
+    Background: Go to login by homepage
+        Given I am on the homepage page
+        And I click Login
 
-    Given I am on the homepage page
-    When I search mobil products
-    Then I see list of product is containing of mobil
+    Scenario: As a user, I want to login with registered phonenumber
+        When I login by phonenumber 085852742749
+        Then I see otp page
+
+    Scenario Outline: As a user, I want to login with <title>
+        When I login by phonenumber <phonenumber1>
+        Then error message <errorMessage> is appear
+        Examples:
+            | title 1           | phonenumber1 | errorMessage          |
+            | Unregister accout | 08585274274  | Nomor belum terdaftar |

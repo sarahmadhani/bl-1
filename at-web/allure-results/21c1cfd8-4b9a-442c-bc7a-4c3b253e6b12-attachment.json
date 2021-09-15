@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//*[@class=\"bl-flex-item mb-8\"][43]//p/a"
-}
