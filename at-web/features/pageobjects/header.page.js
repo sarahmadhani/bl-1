@@ -4,9 +4,7 @@ import Page from './page';
  * sub page containing specific selectors and methods for a specific page
  */
 class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
+    userManagementButton (char) { return $(`//*[text()="${char}"]`) } 
     get serachField () { return $('[name="search[keywords]"]') }
     get btnSubmit () { return $('[type="submit"]') }
 
@@ -19,9 +17,10 @@ class LoginPage extends Page {
         await super.clickElement(this.btnSubmit)
     }
 
-    /**
-     * overwrite specifc options to adapt it to page object
-     */
+    async clickButtonHeader (char) {
+        await super.clickElement(this.userManagementButton(char))
+    }
+
     open () {
         return super.open('login');
     }

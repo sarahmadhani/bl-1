@@ -4,29 +4,40 @@ import Page from './page';
  * sub page containing specific selectors and methods for a specific page
  */
 class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
+  /**
+   * define selectors using getter methods
+   */
+  get inputPhoneNumber() {
+    return $('#user_identity_textfield');
+  }
+  get btnSubmit() {
+    return $('//button/span[text()="Lanjut"]');
+  }
+  get otpTitle() {
+    return $('//p[contains(.,"Verifikasi Login")]');
+  }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
-    }
+  get errorMessage() {
+    return $('[class="bl-text bl-text--caption bl-text--error"]');
+  }
 
-    /**
-     * overwrite specifc options to adapt it to page object
-     */
-    open () {
-        return super.open('login');
-    }
+ 
+  async login(username) {
+    await this.inputEventValue(this.inputPhoneNumber, username);
+    await super.clickElement(this.btnSubmit);
+  }
+
+  async verifyErrorMessage(char) {
+    await this.isContainText(this.errorMessage, char);
+  }
+
+  async otpPopUpDisplayed() {
+    await this.isDisplayed(this.otpTitle);
+  }
+
+  open() {
+    return super.open('login');
+  }
 }
 
 export default new LoginPage();
