@@ -12,11 +12,11 @@ Given(/^I am on the (\w+) page$/, async (page) => {
   await pages[page].open();
 });
 
-When(/^I login by phonenumber (\w+)$/, async (char) => {
+When(/^I login by phonenumber (.*)$/, async (char) => {
   await LoginPage.login(char);
 });
 
-Then(/^error message (\w+) is appear$/, async (char) => {
+Then(/^error message (.*) is appear$/, async (char) => {
   await LoginPage.verifyErrorMessage(char);
 });
 
