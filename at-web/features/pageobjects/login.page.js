@@ -21,7 +21,10 @@ class LoginPage extends Page {
     return $('[class="bl-text bl-text--caption bl-text--error"]');
   }
 
- 
+  get subtitle() {
+    return $('//*[text()="Login dulu, yuk"]');
+  }
+
   async login(username) {
     await this.inputEventValue(this.inputPhoneNumber, username);
     await super.clickElement(this.btnSubmit);
@@ -31,8 +34,12 @@ class LoginPage extends Page {
     await this.isContainText(this.errorMessage, char);
   }
 
+  async verifyLoginPage() {
+    await super.isDisplayed(this.subtitle);
+  }
+
   async otpPopUpDisplayed() {
-    await this.isDisplayed(this.otpTitle);
+    await super.isDisplayed(this.otpTitle);
   }
 
   open() {
